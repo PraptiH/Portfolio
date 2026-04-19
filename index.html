@@ -24,13 +24,85 @@
             width: 32rem;
             margin-left: -2.5rem;
         }
+
+        .skillDiv {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+
+        #skill1 {
+            margin-left: 38rem;
+            margin-bottom: -2rem;
+        }
+
+        #skill2 {
+            margin-left: -25rem;
+            margin-top: 2rem;
+        }
+
+        #skill3 {
+            margin-left: 18rem;
+            margin-top: -5rem;
+        }
+
+        #skill4 {
+            margin-left: -5.1rem;
+            margin-top: -7rem;
+        }
+
+        #skill5 {
+            margin-left: 38rem;
+            margin-top: -7rem;
+        }
+
+        #skill6 {
+            width: 20rem;
+            height: 20rem;
+            grid-area: 1/2/span 3/span 1;
+            margin-left: -8rem;
+            margin-top: 3rem;
+            padding-left: 10px;
+            
+        }
+
+        #skill7 {
+            margin-left: -25rem;
+            margin-top: -7rem;
+        }
+
+        .skill {
+            width: 20rem;
+            height: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 8px double;
+        }
+
+        .skillDiv img {
+            width: 8rem;
+            height: 8rem;
+            object-fit: cover;
+            border-radius: 50%;
+            padding: 1rem;
+        }
+
+        .skillDiv p {
+            font-weight: bold;
+            font-size: 2.25rem;
+        }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
     <div
-        class="border flex items-center justify-between mx-[4rem] my-[2rem] p-[2rem] font-semibold text-3xl text-[#1f2421]">
+        class="flex items-center justify-between mx-[4rem] my-[2rem] p-[2rem] font-semibold text-3xl text-[#1f2421]">
         <div class="border">
             <h3 class="italic">Prapti</h3>
         </div>
@@ -59,8 +131,9 @@
     <!-- About -->
     <div class="flex items-center justify-between mx-[4rem] my-[2rem] py-[2rem]">
         <div class="w-[70rem]">
-            <h2 class="font-bold text-7xl">Self-Summary</h2>
-            <p class="font-medium text-3xl tracking-widest leading-relaxed mt-[2rem]">I am currently developing my skills as a
+            <h2 class="text-[#216869] font-bold text-7xl">Self-Summary</h2>
+            <p class="font-medium text-3xl tracking-widest leading-relaxed mt-[2rem]">I am currently developing my
+                skills as a
                 Frontend Developer, with a strong focus on building responsive
                 and intuitive web applications. I enjoy transforming ideas into functional and visually appealing
                 interfaces using technologies like HTML, CSS, Tailwind CSS, React, and Firebase.
@@ -71,7 +144,7 @@
         </div>
 
         <div class="w-[50rem]">
-            <h2 class="font-semibold text-5xl">Education</h2>
+            <h2 class="text-[#216869] font-semibold text-5xl">Education</h2>
 
             <div class="space-y-10 mt-[1rem]">
                 <div>
@@ -107,6 +180,61 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="border mx-[4rem] my-[2rem] py-[2rem]">
+        <h2 class="text-[#216869] font-bold text-7xl leading-loose">Skills</h2>
+        <div class="border skillDiv px-[8rem]">
+            <div id="skill1">
+                <div class="skill">
+                    <img src="./assets/html.png" alt="">
+                    <p>HTML</p>
+                </div>
+            </div>
+
+            <div id="skill2">
+                <div class="skill">
+                    <img src="./assets/css.png" alt="">
+                    <p>CSS</p>
+                </div>
+            </div>
+
+            <div id="skill3">
+                <div class="skill">
+                    <img src="./assets/tailwindcss.png" alt="">
+                    <p>Tailwind</p>
+                </div>
+            </div>
+
+            <div id="skill4">
+                <div class="skill">
+                    <img src="./assets/javascript.png" alt="">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+
+            <div id="skill5">
+                <div class="skill">
+                    <img src="./assets/react.svg" alt="">
+                    <p>React</p>
+                </div>
+            </div>
+
+            <div id="skill6">
+                <div class="skill">
+                    <img src="./assets/mongodb.png" alt="">
+                    <p>MongoDB</p>
+                </div>
+            </div>
+
+            <div id="skill7">
+                <div class="skill">
+                    <img src="./assets/firebase.png" alt="">
+                    <p>Firebase</p>
+                </div>
             </div>
         </div>
     </div>
