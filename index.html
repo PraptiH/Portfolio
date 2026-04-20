@@ -9,8 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/28bbd88697.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #dce1de;
             font-family: "Lobster Two", sans-serif;
@@ -33,8 +38,6 @@
             text-align: center;
         }
 
-
-
         #skill1 {
             margin-left: 38rem;
             margin-bottom: -2rem;
@@ -53,6 +56,8 @@
         #skill4 {
             margin-left: -5.1rem;
             margin-top: -7rem;
+            /* opacity: 0; */
+            animation: fadeIn 1s ease-in-out 0.2s forwards;
         }
 
         #skill5 {
@@ -67,7 +72,7 @@
             margin-left: -8rem;
             margin-top: 3rem;
             padding-left: 10px;
-            
+
         }
 
         #skill7 {
@@ -96,13 +101,41 @@
             font-weight: bold;
             font-size: 2.25rem;
         }
+
+        .hiddenSection {
+            display: none;
+        }
+
+        .projectDiv {
+            border-top: 4px solid;
+            border-bottom: 4px solid;
+            padding: 8%;
+            width: 42rem;
+            margin-left: -2.5rem;
+        }
+
+        /* @keyframes fadeIn {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateX(50px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        } */
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <div
-        class="flex items-center justify-between mx-[4rem] my-[2rem] p-[2rem] font-semibold text-3xl text-[#1f2421]">
+    <div class="flex items-center justify-between mx-[4rem] my-[2rem] p-[2rem] font-semibold text-3xl text-[#1f2421]">
         <div class="border">
             <h3 class="italic">Prapti</h3>
         </div>
@@ -110,7 +143,7 @@
             <ul class="flex gap-[4rem] border">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skill">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#project">Project</a></li>
             </ul>
         </div>
@@ -185,7 +218,7 @@
     </div>
 
     <!-- Skills -->
-    <div class="border mx-[4rem] my-[2rem] py-[2rem]">
+    <div id="skills" class="border mx-[4rem] my-[2rem] py-[2rem]">
         <h2 class="text-[#216869] font-bold text-7xl leading-loose">Skills</h2>
         <div class="border skillDiv px-[8rem]">
             <div id="skill1">
@@ -238,6 +271,74 @@
             </div>
         </div>
     </div>
+
+    <!-- Project -->
+    <div id="project" class="border mx-[4rem] my-[2rem] p-5">
+        <h2 class="text-[#216869] font-bold text-7xl leading-loose">Projects</h2>
+
+        <div class="mt-10 flex items-center justify-center">
+
+            <div>
+                <img class="w-[6rem] object-cover -rotate-25 mb-[2.5rem] -mx-[1rem]" src="./assets/icon.png" alt="">
+                <div class="border-l-4 border-r-4  p-5 w-[40rem] mx-[4rem] -mt-[5rem]">
+
+                    <div class="projectDiv">
+                        <img class="rounded-2xl hover:shadow-xl" src="./assets/appStore.png" alt="">
+                        <div>
+                            <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals to explore, browse, and manage various applications.</p>
+                            <div class="flex items-center justify-between text-4xl text-[#373d20] font-bold italic">
+                                <h4 class="">AppStore</h4>
+                                <i class="btn fa-solid fa-arrow-down" style="color: #373d20;"></i>
+                            </div>
+
+                            <div
+                                class="hiddenSection leading-loose tracking-wider text-2xl mt-[2rem] bg-[#eff1ed] p-[2rem] rounded-2xl">
+                                <p> * Developed the frontend using React.js with TailwindCSS and daisyUI. <br>
+                                    * Used static JS files as placeholder for data representation. <br>
+                                    * Added review section where user can give review if installed the app. <br>
+                                    * Use localStorage for store the review. <br>
+                                    * Integrated Firebase for secure user authentication and authorization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img class="w-[6rem] object-cover -rotate-25 mb-[2.5rem] -mx-[1rem]" src="./assets/icon.png" alt="">
+                <div class="border-l-4 border-r-4  p-5 w-[40rem] mx-[4rem] -mt-[5rem]">
+
+                    <div class="projectDiv">
+                        <img class="rounded-2xl hover:shadow-xl" src="./assets/roommatefinder.png" alt="">
+                        <div>
+                            <p class="text-2xl leading-loose tracking-wider"> A platform that helps individuals find
+                                compatible
+                                roommates.</p>
+                            <div class="flex items-center justify-between text-4xl text-[#373d20] font-bold italic">
+                                <h4 class="">RoommateFinder</h4>
+                                <i class="btn fa-solid fa-arrow-down" style="color: #373d20;"></i>
+                            </div>
+
+                            <div
+                                class="hiddenSection leading-loose tracking-wider text-2xl mt-[2rem] bg-[#eff1ed] p-[2rem] rounded-2xl">
+                                <p> * Developed the frontend using React.js with TailwindCSS and daisyUI. <br>
+                                    * Utilized MongoDB for efficient data storage.
+                                    * Implemented RESTful APIs for data retrieval and representation.
+                                    * Integrated Firebase for secure user authentication and authorization.
+                                    * Added a search functionality to enable users to filter results effectively
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>
+1b433
