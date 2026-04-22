@@ -36,52 +36,58 @@
             margin-left: -2.5rem;
         }
 
+
         .skillDiv {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             align-items: center;
             justify-content: center;
             text-align: center;
+            opacity: 0;
         }
 
         #skill1 {
             margin-left: 38rem;
             margin-bottom: -2rem;
+            opacity: 0;
         }
 
         #skill2 {
+            opacity: 0;
             margin-left: -25rem;
             margin-top: 2rem;
         }
 
         #skill3 {
+            opacity: 0;
             margin-left: 18rem;
             margin-top: -5rem;
         }
 
         #skill4 {
+            opacity: 0;
             margin-left: -5.1rem;
             margin-top: -7rem;
-            /* opacity: 0; */
-            animation: fadeIn 1s ease-in-out 0.2s forwards;
         }
 
         #skill5 {
+            opacity: 0;
             margin-left: 38rem;
             margin-top: -7rem;
         }
 
         #skill6 {
+            opacity: 0;
             width: 20rem;
             height: 20rem;
             grid-area: 1/2/span 3/span 1;
             margin-left: -8rem;
             margin-top: 3rem;
             padding-left: 10px;
-
         }
 
         #skill7 {
+            opacity: 0;
             margin-left: -25rem;
             margin-top: -7rem;
         }
@@ -108,6 +114,98 @@
             font-size: 2.25rem;
         }
 
+        .showSkill {
+            opacity: 1;
+        }
+
+        .showSkill #skill1 {
+            animation: fadeIn3 1s ease-in-out forwards;
+        }
+
+        .showSkill #skill2 {
+            animation: fadeIn3 1s ease-in-out 0.5s forwards;
+        }
+
+        .showSkill #skill3 {
+            animation: fadeIn2 1s ease-in-out 1s forwards;
+        }
+
+        .showSkill #skill4 {
+            animation: fadeIn 1s ease-in-out 1.5s forwards;
+        }
+
+        .showSkill #skill5 {
+            animation: fadeIn4 1s ease-in-out 2s forwards;
+        }
+
+        .showSkill #skill6 {
+            animation: fadeIn5 1s ease-in-out 3s forwards;
+        }
+
+        .showSkill #skill7 {
+            animation: fadeIn4 1s ease-in-out 2.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn2 {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn3 {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn4 {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn5 {
+            0% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
         .hiddenSection {
             display: none;
         }
@@ -119,23 +217,6 @@
             width: 42rem;
             margin-left: -2.5rem;
         }
-
-        /* @keyframes fadeIn {
-            0% {
-                transform: translateX(100px);
-                opacity: 0;
-            }
-
-            50% {
-                transform: translateX(50px);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateX(0px);
-                opacity: 1;
-            }
-        } */
     </style>
 </head>
 
@@ -346,6 +427,7 @@
 
     </div>
 
+   
     <script src="./index.js"></script>
 </body>
 

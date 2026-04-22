@@ -1,4 +1,9 @@
 const navbar = document.getElementById('navbar')
+const hiddenSection = document.querySelectorAll('.hiddenSection')
+const btn = document.querySelectorAll('.btn')
+const skillDiv = document.querySelector('.skillDiv')
+const skills = document.querySelectorAll('.skill')
+
 window.addEventListener('scroll',()=>{
     if(window.scrollY>10){
         navbar.classList.add('navColor')
@@ -8,8 +13,7 @@ window.addEventListener('scroll',()=>{
     }
 })
 
-const hiddenSection = document.querySelectorAll('.hiddenSection')
-const btn = document.querySelectorAll('.btn')
+
 btn.forEach(b => {
     b.addEventListener('click',()=>{
         hiddenSection.forEach(section=>{
@@ -17,3 +21,15 @@ btn.forEach(b => {
         })
     })
 })
+
+const observer = new IntersectionObserver((entries) => {
+    console.log('entering')
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            skillDiv.classList.add('showSkill');
+            observer.unobserve(skillDiv); // 👈 run only once
+        }
+    });
+});
+
+observer.observe(skillDiv);
