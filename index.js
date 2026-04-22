@@ -14,20 +14,21 @@ window.addEventListener('scroll',()=>{
 })
 
 
-btn.forEach(b => {
+btn.forEach((b,i) => {
     b.addEventListener('click',()=>{
-        hiddenSection.forEach(section=>{
-            section.classList.toggle('hiddenSection')
-        })
+            console.log('click')
+            hiddenSection[i]?.classList.toggle('hiddenSection')
+        
     })
 })
+
 
 const observer = new IntersectionObserver((entries) => {
     console.log('entering')
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             skillDiv.classList.add('showSkill');
-            observer.unobserve(skillDiv); // 👈 run only once
+            observer.unobserve(skillDiv);
         }
     });
 });
